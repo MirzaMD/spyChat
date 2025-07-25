@@ -209,7 +209,7 @@ export default function Login() {
         }}}
           className={`w-full flex flex-col justify-center items-center`}>
            <motion.p 
-           className={`text-md sm:text-xl font-serif text-[whitesmoke]`}>
+           className={`text-sm sm:text-xl font-serif text-[whitesmoke]`}>
             Do not have an account, sign up?
             </motion.p>
             <Link
