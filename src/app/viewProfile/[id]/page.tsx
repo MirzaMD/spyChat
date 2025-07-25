@@ -17,7 +17,7 @@ export default function ViewProfilePage(){
     const [ user, setUser ] = useState<userInfo|null>(null);
     const fetchingDetails=useCallback(async ()=>{
        try{
-         const res = await axios.get(`http://localhost:3005/api/singleUser/${id}`,{
+         const res = await axios.get(` https://spychatbe.onrender.com/api/singleUser/${id}`,{
             withCredentials:true
         })
         setUser(res.data);

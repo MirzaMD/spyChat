@@ -39,7 +39,7 @@ export default function ProfilePage(){
     const [ deactivate, setDeactivate ] = useState<boolean>(false);
     const fetchingUserDetails=useCallback(async ()=>{
      try{
-         const res = await axios.get("http://localhost:3005/api/currentUser",{
+         const res = await axios.get(" https://spychatbe.onrender.com/api/currentUser",{
         withCredentials:true
          })
          const { _id,profile, username, email, bio, authType } = res.data;
@@ -87,7 +87,7 @@ export default function ProfilePage(){
                 email:data.email || "demoMail@gmail.com",
                 profile:base64Image
             }
-        await axios.patch(`http://localhost:3005/api/user/editProfile/${userInfo?._id}`,payload,{
+        await axios.patch(` https://spychatbe.onrender.com/api/user/editProfile/${userInfo?._id}`,payload,{
             withCredentials:true
         }) 
         reset();
@@ -101,7 +101,7 @@ export default function ProfilePage(){
                 bio:data.bio,
                 email:data.email || "demoMail@gmail.com",
             }
-            await axios.patch(`http://localhost:3005/api/user/editProfile/${userInfo?._id}`,payload,{
+            await axios.patch(` https://spychatbe.onrender.com/api/user/editProfile/${userInfo?._id}`,payload,{
             withCredentials:true
         }) 
         reset();

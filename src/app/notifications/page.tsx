@@ -27,14 +27,14 @@ export default function Notifications(){
     }
     const fetchingChats= useCallback(async ()=>{
           try{
-            const res = await axios.get("http://localhost:3005/api/chats",{
+            const res = await axios.get(" https://spychatbe.onrender.com/api/chats",{
                 withCredentials:true
             })
             if(res.status===200){
                 setChats(res.data);
                 setReceivedChats(res.data);
             }
-            const response = await axios.get("http://localhost:3005/api/currentUser",{
+            const response = await axios.get(" https://spychatbe.onrender.com/api/currentUser",{
                 withCredentials:true
             })
             if(response.status===200){

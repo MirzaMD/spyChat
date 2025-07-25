@@ -27,11 +27,11 @@ export default function MessagePage(){
 
     const fetchingDetails=useCallback(async ()=>{
        try{
-         const res1 = await axios.get(`http://localhost:3005/api/singleUser/${id}`,{
+         const res1 = await axios.get(` https://spychatbe.onrender.com/api/singleUser/${id}`,{
             withCredentials:true
         })
         setReceiver(res1.data);
-        const res2 = await axios.get(`http://localhost:3005/api/currentUser`,{
+        const res2 = await axios.get(` https://spychatbe.onrender.com/api/currentUser`,{
             withCredentials:true
         })
         setUser(res2.data);
@@ -52,7 +52,7 @@ export default function MessagePage(){
   const fetchMessages = async () => {
     if (!roomId) return;
     try {
-      const res = await axios.get(`http://localhost:3005/api/messages/${roomId}`, {
+      const res = await axios.get(` https://spychatbe.onrender.com/api/messages/${roomId}`, {
         withCredentials: true,
       });
       setChats(res.data);

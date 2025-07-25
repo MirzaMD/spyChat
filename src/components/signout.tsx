@@ -6,7 +6,7 @@ export function SignOut({msg,setLogOut}:{msg:string,setLogOut:(e:boolean)=>void}
     const loggingOut=async ()=>{
         try{
             const payload={ }
-         const res= await axios.post(`http://localhost:3005/local/logout`,payload,
+         const res= await axios.post(` https://spychatbe.onrender.com/local/logout`,payload,
         {
             withCredentials:true
         }

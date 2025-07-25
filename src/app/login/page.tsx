@@ -49,7 +49,7 @@ export default function Login() {
     
         const sub=async (data:Tdata)=>{
          try{
-           const res=await axios("http://localhost:3005/api/localLogin",{
+           const res=await axios(" https://spychatbe.onrender.com/api/localLogin",{
             method:"POST",
             withCredentials:true,
             data
@@ -193,9 +193,9 @@ export default function Login() {
           }
         }}}
           className={`w-full flex justify-evenly cursor-pointer`}>
-            <FaGithub onClick={()=>window.location.href = "http://localhost:3005/auth/github"}
+            <FaGithub onClick={()=>window.location.href = " https://spychatbe.onrender.com/auth/github"}
             className={`text-3xl sm:text-5xl text-[#307e30] hover:text-[#6ad46a] aspect-square`}/>
-            <FaDiscord onClick={()=>window.location.href = "http://localhost:3005/intermediater"}
+            <FaDiscord onClick={()=>window.location.href = " https://spychatbe.onrender.com/intermediater"}
             className={`text-3xl sm:text-5xl text-[#662b66] hover:text-[#b75eb7] aspect-square`}/>
           </motion.div>
 

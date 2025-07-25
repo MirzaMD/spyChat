@@ -21,7 +21,7 @@ const popAnime:Variants={
 }
 const sending = useCallback( async ()=>{
    try{
-     const res = await axios.get("http://localhost:3005/api/currentUser",{
+     const res = await axios.get(" https://spychatbe.onrender.com/api/currentUser",{
       withCredentials:true
     })
     if(res.status===200) setTimeout(()=>{route.replace("/land")},1000)
