@@ -5,7 +5,7 @@ export function DeactivateAcc({msg,setLogOut}:{msg:string,setLogOut:(e:boolean)=
     const route = useRouter();
     const loggingOut=async ()=>{
         try{
-         const res= await axios.delete(` https://spychatbe.onrender.com/api/deactivate`,
+         const res= await axios.delete(`https://spychatbe.onrender.com/api/deactivate`,
             {
                 withCredentials:true
             }
