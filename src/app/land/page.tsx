@@ -16,7 +16,7 @@ export default function LandPage(){
     const [filteredUsers, setFilteredUsers] = useState<Tdata[]>([]);
     const fetchingUsers=useCallback(async ()=>{
          try{
-            const res = await axios.get(" https://spychatbe.onrender.com/api/allusers",{
+            const res = await axios.get("https://spychatbe.onrender.com/api/allusers",{
             withCredentials:true
          })
          if(res){

@@ -100,7 +100,7 @@ export default function ProfilePage(){
                 username:data.username,
                 bio:data.bio,
                 email:data.email || "demoMail@gmail.com",
-            }
+            } //
             await axios.patch(`https://spychatbe.onrender.com/api/user/editProfile/${userInfo?._id}`,payload,{
             withCredentials:true
         }) 
