@@ -49,7 +49,7 @@ export default function Login() {
     
         const sub=async (data:Tdata)=>{
          try{
-           const res=await axios(" https://spychatbe.onrender.com/api/localLogin",{
+           const res=await axios("https://spychatbe.onrender.com/api/localLogin",{
             method:"POST",
             withCredentials:true,
             data

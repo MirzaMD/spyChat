@@ -77,7 +77,7 @@ export default function SignUpPage(){
     authType:"local"
   }
   try {
-  await axios.post(" https://spychatbe.onrender.com/api/signup", payload, {
+  await axios.post("https://spychatbe.onrender.com/api/signup", payload, {
     withCredentials: true,
     headers: {
       "Content-Type": "application/json"

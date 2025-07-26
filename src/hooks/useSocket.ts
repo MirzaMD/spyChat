@@ -6,7 +6,7 @@ const useSocket = (userId:string|null)=>{
     const socketRef = useRef<Socket|null>(null);
 
     useEffect(()=>{
-        const socket=io("http://localhost:3005",{
+        const socket=io("https://spychatbe.onrender.com",{
             withCredentials:true
         })
         socketRef.current=socket;
