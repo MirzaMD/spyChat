@@ -47,7 +47,8 @@ export default function LandPage(){
         {filteredUsers?.map((val,idx)=>(
             <div key={idx}
             className={`mt-4`}>
-             <ProfilePage pic={val.profile} link1={`/viewProfile/${val._id}`} link2={`/message/${val._id}`} />
+             <ProfilePage pic={val.profile} link1={`/viewProfile/${val._id}`}
+              link2={`/message/${val._id}`} username={val.username}/>
             </div>
         ))}
     </motion.div>
