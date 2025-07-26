@@ -39,12 +39,10 @@ export default function ProfilePage(){
     const [ deactivate, setDeactivate ] = useState<boolean>(false);
     const fetchingUserDetails=useCallback(async ()=>{
      try{
-         const res = await axios.get("http://localhost:3005/api/currentUser",{
-            withCredentials:true
-         })
-         /*axios.get("https://spychatbe.onrender.com/api/currentUser",{
+         const res = await axios.get("https://spychatbe.onrender.com/api/currentUser",{
         withCredentials:true
-         })*/
+         })
+         
          console.log("[User Fetched]", res.data);
          const { _id,profile, username, email, bio, authType } = res.data;
           setUserInfo({
