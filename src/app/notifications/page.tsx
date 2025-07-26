@@ -27,14 +27,14 @@ export default function Notifications(){
     }
     const fetchingChats= useCallback(async ()=>{
           try{
-            const res = await axios.get(" https://spychatbe.onrender.com/api/chats",{
+            const res = await axios.get("https://spychatbe.onrender.com/api/chats",{
                 withCredentials:true
             })
             if(res.status===200){
                 setChats(res.data);
                 setReceivedChats(res.data);
             }
-            const response = await axios.get(" https://spychatbe.onrender.com/api/currentUser",{
+            const response = await axios.get("https://spychatbe.onrender.com/api/currentUser",{
                 withCredentials:true
             })
             if(response.status===200){
@@ -55,7 +55,7 @@ export default function Notifications(){
     const filtered = chats.filter((val) => val.senderId !== user._id);
     setReceivedChats(filtered);
   }
-}, [user, chats]);
+},[user, chats]);
     return(
         <motion.div 
         variants={anime}
@@ -67,8 +67,8 @@ export default function Notifications(){
             className={`w-[90%] h-[100px] font-serif text-sm sm:text-bold border-2 border-stone-50
                 text-white flex justify-between mt-3 rounded-md`}>
                     <Link href={`/message/${val.senderId}`}>
-                 <p className={`font-bold ml-2`}> you received a message!</p></Link>
-                 <p className={`font-mono text-[#f5f5f58a] mr-4`}> {new Date().toLocaleString()}</p>
+                 <p className={`font-bold ml-2 `}> you received a message!</p></Link>
+                 <p className={`text-[0.5rem] font-mono text-[#f5f5f58a] mr-4`}> {new Date().toLocaleString()}</p>
                 </div>
            ))}
            <div className={`h-200px`}></div>

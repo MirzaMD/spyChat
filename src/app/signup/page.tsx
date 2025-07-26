@@ -131,7 +131,7 @@ export default function SignUpPage(){
                 variants={childAnime}
                 className={`text-md sm:text-lg text-[whitesmoke] font-[cursive]`}>Profile Picture:
                 </motion.label>
-                <motion.div className={`w-full flex justify-center items-center`}>
+                <motion.div className={`w-full flex flex-col justify-center items-center`}>
                 <motion.div className={`h-[60px] sm:h-[100px] w-[60px] sm:w-[100px] relative m-2`}>
                     <Image
                        src={img?URL.createObjectURL(img):"/logo.png"}
@@ -146,9 +146,11 @@ export default function SignUpPage(){
                      variants={childAnime} >
                     <FaUpload className={`text-5xl sm:text-7xl 
                     text-[whitesmoke] border-4 border-dotted
-                    border-[#ff58ff] rounded-lg border-t-[#49ff49] border-b-[#209cbb]`}
+                    border-[#ff58ff] rounded-lg
+                     border-t-[#49ff49] border-b-[#209cbb]
+                     `}
                     onClick={()=>imgRef.current?.click()} 
-                    style={{boxShadow:`5px 5px 5px black`}}/> 
+                    style={{boxShadow:`5px 5px 5px white`}}/> 
                 </motion.div>
               </motion.div>
               </motion.div>

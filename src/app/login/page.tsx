@@ -193,12 +193,11 @@ export default function Login() {
           }
         }}}
           className={`w-full flex justify-evenly cursor-pointer`}>
-            <FaGithub onClick={()=>window.location.href = " https://spychatbe.onrender.com/auth/github"}
+            <FaGithub onClick={()=>window.location.href = "https://spychatbe.onrender.com/auth/github"}
             className={`text-3xl sm:text-5xl text-[#307e30] hover:text-[#6ad46a] aspect-square`}/>
-            <FaDiscord onClick={()=>window.location.href = " https://spychatbe.onrender.com/intermediater"}
+            <FaDiscord onClick={()=>window.location.href = "https://spychatbe.onrender.com/auth/discord"}
             className={`text-3xl sm:text-5xl text-[#662b66] hover:text-[#b75eb7] aspect-square`}/>
           </motion.div>
-
           <motion.div 
              variants={{hid:{opacity:0,x:-300},
         show:{opacity:1,x:0,
